@@ -23,7 +23,15 @@ module.exports = {
       },
       network_id: '3',
       skipDryRun: true,
-    }, Bsctestnet: {
+    },
+    kovan: {
+      provider: () => {
+        return new HDWalletProvider(process.env.MNEMONIC, process.env.kovan_URL)
+      },
+      network_id: '41',
+      skipDryRun: true,
+    },
+    Bsctestnet: {
       provider: () => new HDWalletProvider(process.env.MNEMONIC, process.env.BscTestnet_URL),
       network_id: 97,
       confirmations: 10,
