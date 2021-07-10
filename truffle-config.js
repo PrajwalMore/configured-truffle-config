@@ -24,6 +24,13 @@ module.exports = {
       network_id: '3',
       skipDryRun: true,
     },
+    goerli: {
+      provider: () => {
+        return new HDWalletProvider(process.env.MNEMONIC, process.env.goerli_URL)
+      },
+      network_id: '5',
+      skipDryRun: true,
+    },
     kovan: {
       provider: () => {
         return new HDWalletProvider(process.env.MNEMONIC, process.env.kovan_URL)
