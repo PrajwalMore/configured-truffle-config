@@ -15,6 +15,8 @@ This repository contains configured truffle-config file with all networks
 
 7.bsc (BSC mainnet) 
 
+8.ganache
+
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ⚫ Installing hdwallet-provider:- 
