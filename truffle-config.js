@@ -38,7 +38,21 @@ module.exports = {
       network_id: '41',
       skipDryRun: true,
     },
-    Bsctestnet: {
+    polygonTestnet: {
+      provider: () => {
+        return new HDWalletProvider(process.env.MNEMONIC, process.env.polygonMumbaiTestnet_URL)
+      },
+      network_id: '80001',
+      skipDryRun: true,
+    },
+    polygon: {
+      provider: () => {
+        return new HDWalletProvider(process.env.MNEMONIC, process.env.polygon_URL)
+      },
+      network_id: '137',
+      skipDryRun: true,
+    },
+    bscTestnet: {
       provider: () => new HDWalletProvider(process.env.MNEMONIC, process.env.BscTestnet_URL),
       network_id: 97,
       confirmations: 10,
@@ -51,9 +65,10 @@ module.exports = {
       confirmations: 10,
       timeoutBlocks: 200,
       skipDryRun: true
-    },ganache: {
+    },
+    ganache: {
       host: "localhost",
-      port: 7545,
+      port: 8545,
       network_id: "5777"
     },
   },
